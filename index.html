@@ -12,7 +12,9 @@
 <meta name="geo.region" content="PK-IS">
 <meta name="geo.placename" content="Islamabad">
 <meta name="geo.position" content="33.574523;73.169550">
-<title>FZ International Hospital Islamabad | Expert Multi-Specialty Care</title>
+<link rel="me" href="https://www.instagram.com/fzinternationalhospital/">
+<link rel="me" href="https://www.facebook.com/FZinternational.hospital">
+<title>Best Hospital in Jinnah Garden Islamabad | FZ International Hospital</title>
 
 <script type="application/ld+json">
 {
@@ -41,6 +43,7 @@
     "reviewCount": "200"
   }
 }
+
 </script>
 
 <script type="application/ld+json">
@@ -63,6 +66,31 @@
       "name": "What is the cost of dental implants at FZ International Hospital?",
       "acceptedAnswer": {"@type": "Answer","text": "Dental implants start from Rs. 80,000 at FZ International Hospital Islamabad."}
     }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "FZ International Hospital",
+  "image": "https://fzinternationalhospital.com/images/hospital.jpg",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "204 Street, Shaheen Commercial",
+    "addressLocality": "Jinnah Garden",
+    "addressRegion": "Islamabad",
+    "postalCode": "45710",
+    "addressCountry": "PK"
+  },
+  "telephone": "+92-51-4493031",
+  "areaServed": [
+    "DHA Islamabad",
+    "Bahria Town",
+    "PWD",
+    "Soan Gardens",
+    "Rawalpindi"
   ]
 }
 </script>
@@ -470,7 +498,7 @@ footer { background:var(--navy); padding:52px 5% 24px; }
     <div class="hero-content">
       <div class="hero-badge">⭐ IHRA Registered · Trusted by Hundreds in Islamabad</div>
       <h1>Expert Medical Care in <span>Islamabad</span> — Book Your Appointment Today</h1>
-      <p class="hero-sub">Senior Consultants &nbsp;·&nbsp; 24/7 Emergency &nbsp;·&nbsp; Same-Day Consultation Available</p>
+      <p class="hero-sub">Senior Consultants · 24/7 Emergency · Same-Day Consultation Available</p>
 
       <div class="hero-trust">
         <div class="trust-item"><div class="trust-chk">✓</div>45+ Years Experienced — Maj Gen. (R) Medical Specialists</div>
@@ -488,10 +516,11 @@ footer { background:var(--navy); padding:52px 5% 24px; }
       </div>
 
       <div class="hero-ctas">
-        <a href="tel:0514493031" class="btn-gold">📞 Call: 051-4493031</a>
-        <a href="https://wa.me/923111529680?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20FZ%20International%20Hospital" class="btn-wa" target="_blank">💬 WhatsApp Appointment</a>
-        <a href="https://maps.app.goo.gl/EGrFk54bbtWk7nGb8" target="_blank" class="btn-dir">📍 Get Directions</a>
-      </div>
+       <div class="hero-ctas">
+  <a href="tel:0514493031" class="btn-gold">📞 Call Now (Instant Booking)</a>
+  <a href="https://wa.me/923111529680?text=Hello%2C%20I%20want%20appointment%20today" class="btn-wa" target="_blank">💬 WhatsApp (Fast Response)</a>
+  <a href="https://maps.app.goo.gl/EGrFk54bbtWk7nGb8" target="_blank" class="btn-dir">📍 Get Directions</a>
+</div>
 
       <div class="urgency-bar"><span class="blink">🔴</span> Limited slots today &nbsp;·&nbsp; Instant response on WhatsApp</div>
 
@@ -1079,7 +1108,7 @@ footer { background:var(--navy); padding:52px 5% 24px; }
         </div>
         <div class="tags">
 	
-	<span class="tag">Braces (Pay Rs.35,000 upfront &amp; remaining in monthly installments)</span><span class="tag">Aligners Starting from Rs. 80k &amp; goes upto Rs. 250,0000</span>
+	<span class="tag">Braces (Pay Rs.35,000 upfront &amp; remaining in monthly installments)</span><span class="tag">Aligners Starting from Rs. 80,000 &amp; goes up to Rs. 250,0000</span>
           <span class="tag">Braces consultations (Rs. 1,500)</span><span class="tag">Braces Adjustments (Rs. 3,000 to Rs. 5,000 depending upon complexity of treatment)</span><span class="tag">Invincible Braces (Starting from Rs. 150,000 & goes upto Rs. 350,000)</span>
        
 
@@ -1480,7 +1509,25 @@ function filterSpec(cat, btn) {
 let allShown = false;
 function toggleAllSpecs() {
   allShown = !allShown;
-  document.querySelectorAll('#specGrid .spec-card.hidden').forEach(c => c.style.display = allShown ? '' : '');
+
+  const cards = document.querySelectorAll('#specGrid .spec-card');
+
+  if(allShown) {
+    cards.forEach(c => {
+      c.style.display = '';
+      c.classList.remove('hidden');
+    });
+    document.getElementById('showMoreBtn').textContent = 'Show Less ▲';
+  } else {
+    cards.forEach((c,i) => {
+      if(i >= 6){
+        c.style.display = 'none';
+        c.classList.add('hidden');
+      }
+    });
+    document.getElementById('showMoreBtn').textContent = 'Show All 15 Departments ▼';
+  }
+}
   if(allShown) {
     document.querySelectorAll('#specGrid .spec-card').forEach(c => { c.style.display=''; c.classList.remove('hidden'); });
     document.getElementById('showMoreBtn').textContent = 'Show Less ▲';
@@ -1495,6 +1542,12 @@ setTimeout(() => {
   const b = document.getElementById('waBubble');
   if(b) { b.style.display='block'; setTimeout(() => { b.style.display='none'; }, 6000); }
 }, 10000);
+
+// ── Auto WhatsApp Popup after 25 seconds
+setTimeout(() => {
+  window.open("https://wa.me/923111529680?text=Hello%2C%20I%20need%20doctor%20appointment", "_blank");
+}, 25000);
+
 </script>
 </body>
 </html>
